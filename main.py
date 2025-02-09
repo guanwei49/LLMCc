@@ -278,7 +278,7 @@ def if_Violation(bpmn_model, rule):
     #              f"\n #Regulation: {rule}"
     #              f"\n ###Instructions: If the process complies with the regulation, provide the one-word feedback: 'Compliance'. If the process violates the regulation, respond with 'Violation', followed by an explanation.")
 
-    print(query_vio)
+    # print(query_vio)
     res = chat_LLM(query_vio)
     # print('-' * 20)
     # print("Response: " + res)
