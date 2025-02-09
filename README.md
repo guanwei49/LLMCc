@@ -17,9 +17,9 @@ Official Implementation of "LLMCc: Leveraging LLMs for Compliance Checking in Bu
  conda install --yes --file requirements.txt # You may need to downgrade the torch using pip to match the CUDA version
 ```
 
-2. Evaluate on test dataset.
+2. Evaluate on test dataset located in folder ```LPD4VR-master```.
 
-- Set the following variations in **main.py**
+- Set the following variations in ```main.py```
    ```
   client = OpenAI( 
     api_key = os.environ.get("OPENAI_API_KEY")  # You can also pass the api_key as an argument directly
