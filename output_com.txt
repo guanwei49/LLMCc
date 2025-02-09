@@ -41,7 +41,7 @@ This process complies with all regulations.
 .\LPD4VR-master\compliance\BuyDrug2.bpmn
 This process violates the following regulations along with their corresponding reasons:
 ##Regulation: If the pharmacy does not perform prescription verification, it is a violation process.
-##Reason for Violation: Violation. The process description indicates that the pharmacy is responsible for the activity 'Check the prescription', which implies that the pharmacy does perform prescription verification. Therefore, the process complies with the regulation that the pharmacy must perform prescription verification.
+##Reason for Violation: Violation. The process includes a step for the pharmacy to 'Check the prescription', which implies that prescription verification is performed. However, the process also includes a branch where the pharmacy does not perform prescription verification if the prescription contains no prescription drugs. Therefore, if prescription drugs are involved, the pharmacy must verify the prescription; otherwise, it would be a violation of the regulation. The process description does not clearly indicate that prescription verification is always performed when prescription drugs are involved, which is required by the regulation.
 --------------------
 .\LPD4VR-master\compliance\ChangePasswordService.bpmn
 This process complies with all regulations.
@@ -60,18 +60,22 @@ This process complies with all regulations.
 --------------------
 .\LPD4VR-master\compliance\ConsultationWithPicture.bpmn
 This process violates the following regulations along with their corresponding reasons:
-##Regulation: During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process includes an activity 'Test for first visit', which determines whether it is the user's first time. However, this activity is not performed by the 'Internet healthcare service platform provider', but rather as part of the process flow. The regulation specifically requires that the 'Internet healthcare service provider' must judge whether the user is the first diagnosis online, which is not evident in the provided process details.
-##Regulation: During online disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process involves online disease diagnosis, and the regulation requires that medical staff perform identity authentication before online diagnosis and treatment. However, in the provided process, the activity 'Authentication' is performed by the 'Internet healthcare service platform provider' and not by the 'medical staff'. Therefore, this process violates the regulation.
+##Regulation: During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process includes an activity 'Start the consultation' by medical staff, but there is no prior identity authentication by the medical staff themselves before online diagnosis and treatment. The identity authentication is performed by the 'Internet healthcare service platform provider' in the activity 'Authentication', which does not fulfill the requirement for medical staff to perform this authentication.
 --------------------
 .\LPD4VR-master\compliance\ConsultationWithVideo.bpmn
 This process violates the following regulations along with their corresponding reasons:
-##Regulation: During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process includes an activity 'Is it the first time', which is responsible for determining whether it is the user's first diagnosis online. However, this activity is not performed by the 'Internet healthcare service platform provider', but rather seems to be part of the decision-making process without a specified responsible participant. Thus, the Internet healthcare service provider is not explicitly judging whether the user is having their first diagnosis online, which violates the regulation.
+##Regulation: During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include any activity where the medical staff perform identity authentication before the online diagnosis and treatment, which violates the regulation that requires identity authentication during disease diagnosis.
 --------------------
 .\LPD4VR-master\compliance\ConsultationwithvideoService.bpmn
-This process complies with all regulations.
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: During disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include any activity where the Internet healthcare service platform provider judges whether the user is undergoing their first diagnosis online. This omission violates the regulation that requires such a judgment during disease diagnosis.
+##Regulation: During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process indicates that the activity 'Authenticate' is executed after the activity 'Confirmation of completed payment' and before the activity 'Online diagnosis'. This means the medical staff do perform identity authentication before online diagnosis and treatment, complying with the regulation. However, the regulation requires identity authentication by medical staff specifically before the online diagnosis, and the process does not explicitly mention that the medical staff are the ones performing the authentication. Therefore, it is judged as a violation of the process.
+##Regulation: During appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
+##Reason for Violation: Violation. The process does not include an activity where the platform judges whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment. This omission constitutes a violation of the regulation.
 --------------------
 .\LPD4VR-master\compliance\DiseaseKnowledgeBaseService.bpmn
 This process complies with all regulations.
@@ -149,26 +153,28 @@ This process complies with all regulations.
 This process complies with all regulations.
 --------------------
 .\LPD4VR-master\compliance\OnlineConsultationProcess.bpmn
-This process violates the following regulations along with their corresponding reasons:
-##Regulation: During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process includes an activity 'Is it the first time', which is a decision point to determine whether it is the user's first diagnosis online. However, this activity is handled by the 'Internet healthcare service platform provider', which complies with the regulation. Therefore, the process complies with the regulation.
-##Regulation: During online disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process violates the regulation because the medical staff is responsible for the activity 'Perform real-name authentication', which is the identity authentication step, but this step occurs after the 'Consultation Reminder' and before the 'The consultation begins'. The regulation requires that identity authentication be performed before the online diagnosis and treatment, and in this process, it is not clear if the authentication is done before any diagnosis and treatment activities.
+This process complies with all regulations.
 --------------------
 .\LPD4VR-master\compliance\OnlineConsultationServiceProcess.bpmn
 This process violates the following regulations along with their corresponding reasons:
-##Regulation: During online disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process does not indicate that the medical staff perform identity authentication before the online diagnosis and treatment activities.
+##Regulation: During disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include an activity where the Internet healthcare service platform provider judges whether the user is undergoing their first diagnosis online. This omission violates the regulation that requires such a judgment during disease diagnosis.
+##Regulation: During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not indicate that medical staff perform identity authentication before the online diagnosis and treatment activities. The regulation requires that identity authentication by medical staff occur before these activities, and the absence of this step constitutes a violation.
+##Regulation: During appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
+##Reason for Violation: Violation. The process does not include any activity where the platform judges whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, which is required by the regulation.
 --------------------
 .\LPD4VR-master\compliance\OnlineConsultationwithVolunteerMedicalStaff.bpmn
 This process complies with all regulations.
 --------------------
 .\LPD4VR-master\compliance\OnlineDiagnosisService.bpmn
 This process violates the following regulations along with their corresponding reasons:
-##Regulation: During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process does not involve the Internet healthcare service platform provider in judging whether the user is undergoing the first diagnosis online. This step is missing, which leads to a violation of the regulation.
-##Regulation: During online disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
-##Reason for Violation: Violation. The process does not include any activity where the medical staff perform identity authentication before the online diagnosis and treatment.
+##Regulation: During disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include an activity where the Internet healthcare service platform provider evaluates whether the user is experiencing their first diagnosis online. This omission violates the regulation that requires such a judgment during disease diagnosis.
+##Regulation: During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include any activity where medical staff perform identity authentication before the online diagnosis and treatment. The regulation requires that identity authentication be performed by medical staff before proceeding with online diagnosis, which is not present in the described process.
+##Regulation: During appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
+##Reason for Violation: Violation. The process does not include any activity where the platform judges whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment. This omission violates the regulation.
 --------------------
 .\LPD4VR-master\compliance\OnlineVolunteerDiagnosisService.bpmn
 This process complies with all regulations.
@@ -231,7 +237,13 @@ This process complies with all regulations.
 This process complies with all regulations.
 --------------------
 .\LPD4VR-master\compliance\onlineConsultation.bpmn
-This process complies with all regulations.
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: During disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include any activity where the Internet healthcare service platform provider checks whether the user is undergoing their first diagnosis online. This omission violates the regulation that requires such a judgment during disease diagnosis.
+##Regulation: During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include an activity where medical staff perform identity authentication before starting the online consultation and treatment.
+##Regulation: During appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
+##Reason for Violation: Violation. The process does not include any activity where the platform judges whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment. This omission means the process does not comply with the regulation requiring such a judgment during appointment for medical treatment.
 --------------------
 .\LPD4VR-master\compliance\self-discharge service.bpmn
 This process complies with all regulations.
@@ -239,4 +251,6 @@ This process complies with all regulations.
 .\LPD4VR-master\compliance\smart guidance service.bpmn
 This process complies with all regulations.
 --------------------
-Number of violated process models: 6; Number of compliant process models: 68
+Number of violated process models: 7; Number of compliant process models: 67
+
+Process finished with exit code 0

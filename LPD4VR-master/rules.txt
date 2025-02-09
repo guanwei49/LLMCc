@@ -2,6 +2,6 @@ If the pharmacy does not perform prescription verification, it is a violation pr
 The upload of medical institution qualification materials must include ACEMI, MTPL, SDSNL, LMDCL, RDTL, RSL, SCPND&FPS, CMAR, ICPL, otherwise it will be judged as a violation process.
 The upload of medical staff qualification materials must include PQC and PPC, otherwise it will be judged as a violation process.
 If the pharmacy does not perform drug list verification(judging whether there are prescription drugs), it will be judged as a violation process.
-During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
-During online disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
-During online appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
+During disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+During disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+During appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
