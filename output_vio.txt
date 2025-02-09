@@ -1,0 +1,76 @@
+.\LPD4VR-master\violance\ConsultationWithPicture.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process involves the activity 'Test for the first visit', which is executed by the participant 'Internet healthcare service platform provider'. This activity checks whether it is the user's first visit, which aligns with the regulation that the Internet healthcare service provider must judge whether the user is the first diagnosis online. However, the regulation requires that this judgment be explicitly documented as part of the process. Since the process does not clearly specify this judgment activity, it is considered a violation.
+--------------------
+.\LPD4VR-master\violance\Consultationwithvideo.bpmn
+'str' object has no attribute 'add_in_arc'
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: Incomplete BPMN model.
+##Reason for Violation: 'str' object has no attribute 'add_in_arc'
+--------------------
+.\LPD4VR-master\violance\Go to adult vaccination.bpmn
+'str' object has no attribute 'add_in_arc'
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: Incomplete BPMN model.
+##Reason for Violation: 'str' object has no attribute 'add_in_arc'
+--------------------
+.\LPD4VR-master\violance\Medical registration.bpmn
+'str' object has no attribute 'add_in_arc'
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: Incomplete BPMN model.
+##Reason for Violation: 'str' object has no attribute 'add_in_arc'
+--------------------
+.\LPD4VR-master\violance\MedicalInstitutionAccessApproval.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: The upload of medical institution qualification materials must include ACEMI, MTPL, SDSNL, LMDCL, RDTL, RSL, SCPND&FPS, CMAR, ICPL, otherwise it will be judged as a violation process.
+##Reason for Violation: Violation. The process violates the regulation because the upload of medical institution qualification materials does not include the mandatory data 'LMDCL', 'RDTL', and 'SCPND&FPS'.
+--------------------
+.\LPD4VR-master\violance\MedicalStaffRegister.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: The upload of medical staff qualification materials must include PQC and PPC, otherwise it will be judged as a violation process.
+##Reason for Violation: Violation: The process violates the regulation because the upload of medical staff qualification materials includes 'PPC' but does not include 'PQC', which is mandatory according to the regulation.
+--------------------
+.\LPD4VR-master\violance\MedicationPurchase.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: If the pharmacy does not perform prescription verification, it is a violation process.
+##Reason for Violation: Violation. The process does not include the activity 'prescription verification' performed by the pharmacy, which is required by the regulation.
+##Regulation: If the pharmacy does not perform drug list verification(judging whether there are prescription drugs), it will be judged as a violation process.
+##Reason for Violation: Violation. The process violates the regulation because the pharmacy does not perform the activity of drug list verification to judge whether there are prescription drugs.
+--------------------
+.\LPD4VR-master\violance\OnlineBooking2.bpmn
+This process complies with all regulations.
+--------------------
+.\LPD4VR-master\violance\OnlineConsultationServiceProcess.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: During online disease diagnosis, if the Internet healthcare service provider does not judge whether the user is the first diagnosis online, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not indicate that the Internet healthcare service platform provider is involved in judging whether the user is undergoing their first diagnosis online during the online disease diagnosis.
+##Regulation: During online disease diagnosis, if medical staff do not perform identity authentication before online diagnosis and treatment, it will be judged as a violation of the process.
+##Reason for Violation: Violation. The process does not include any activity where the medical staff performs identity authentication before the 'Online diagnosis' activity. Therefore, it violates the regulation that requires identity authentication by medical staff before online diagnosis and treatment.
+--------------------
+.\LPD4VR-master\violance\OnlineConsultationwithVolunteerMedicalStaff.bpmn
+This process complies with all regulations.
+--------------------
+.\LPD4VR-master\violance\User register.bpmn
+'str' object has no attribute 'add_in_arc'
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: Incomplete BPMN model.
+##Reason for Violation: 'str' object has no attribute 'add_in_arc'
+--------------------
+.\LPD4VR-master\violance\VolunteerMedicalService.bpmn
+This process complies with all regulations.
+--------------------
+.\LPD4VR-master\violance\VolunteerOnlineConsultation.bpmn
+This process complies with all regulations.
+--------------------
+.\LPD4VR-master\violance\drugPurchase.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: If the pharmacy does not perform prescription verification, it is a violation process.
+##Reason for Violation: Violation. The process includes a branch where if the answer to 'Does it contain prescription drugs' is 'yes', the activity 'Request for prescription' is executed, followed by 'send the prescription request', and then 'Choose whether to upload a prescription'. If the subject of care chooses not to upload a prescription, the activity 'reject to upload the prescription' is executed and the process ends. In this scenario, the pharmacy does not perform prescription verification, violating the regulation that requires the pharmacy to perform prescription verification.
+--------------------
+.\LPD4VR-master\violance\onlineConsultation.bpmn
+This process violates the following regulations along with their corresponding reasons:
+##Regulation: During online appointment for medical treatment, if the platform does not judge whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment, then it is judged as a violation process.
+##Reason for Violation: Violation. The process does not include any activity where the 'Internet healthcare service platform provider' or any other participant judges whether the user's online diagnosis and treatment appointment is the first diagnosis and treatment. Therefore, it violates the regulation.
+--------------------
+Number of violated process models: 11; Number of compliant process models: 4
